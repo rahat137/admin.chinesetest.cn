@@ -155,17 +155,21 @@ body{
   .photo-box{width:100%}
   .photo{width:120px;height:150px}
 }
-.section-title {
-  font-size: 12px;
-  font-weight: 700;
-  color: #000;
+.info-table{
+  margin: 0 !important;
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+}
 
-  margin-top: 0;      /* উপরের ফাঁকা সরাবে */
-  margin-bottom: 8px; /* নিচে সামান্য স্পেস */
+.info-table + .section-title{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 
-  padding-top: 0;     /* উপরের প্যাডিং বন্ধ */
-  padding-bottom: 0;
-
+.section-title{
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
   line-height: 1.2;
 }
 
