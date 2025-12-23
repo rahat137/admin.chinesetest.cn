@@ -2,82 +2,82 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>中文考试成绩在线验证结果查询</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>中文考试成绩在线验证结果查询（Demo）</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="page">
-    <div class="top-title">
-      <div class="h1">中文考试成绩在线验证结果查询</div>
-      <div class="h2">汉考国际教育科技（北京）有限公司（CTI）</div>
-    </div>
+    <header class="header">
+      <h1>中文考试成绩在线验证结果查询</h1>
+      <p class="sub">（项目演示 Demo - 非官方页面 / Not an official CTI page）</p>
+    </header>
 
-    <div class="card">
-      <!-- Main info block -->
-      <div class="section">
-        <div class="section-label">Information of test taker</div>
+    <main class="card">
+      <div class="card-head">
+        <div class="section-title">Information of test taker</div>
+      </div>
 
-        <div class="info-grid">
-          <table class="info-table" aria-label="Information of test taker">
-            <tbody>
-              <tr>
-                <th>Name on Certificate</th>
-                <td>DOAN THI BICH NGOC</td>
-              </tr>
-              <tr>
-                <th>Chinese Name</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Nationality</th>
-                <td>越南</td>
-              </tr>
-              <tr>
-                <th>Gender</th>
-                <td>女</td>
-              </tr>
-
-              <tr class="divider">
-                <th colspan="2">考试信息</th>
-              </tr>
-
-              <tr>
-                <th>考点名称</th>
-                <td>越南胡志明市师范大学（网考）</td>
-              </tr>
-              <tr>
-                <th>Ticket No.</th>
-                <td class="mono">H52333850020100177&nbsp;&nbsp;H92325850020100240</td>
-              </tr>
-              <tr>
-                <th>证书编号</th>
-                <td class="mono">H52303005309</td>
-              </tr>
-              <tr>
-                <th>Test Type</th>
-                <td>HSK五级</td>
-              </tr>
-              <tr>
-                <th>Test Time</th>
-                <td>Mar 11, 2023</td>
-              </tr>
-            </tbody>
+      <div class="top-grid">
+        <!-- LEFT: info tables -->
+        <div class="tables">
+          <table class="info-table">
+            <tr>
+              <th>Name on Certificate</th>
+              <td id="name">YOUR NAME</td>
+            </tr>
+            <tr>
+              <th>Chinese Name</th>
+              <td id="cnname">—</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td id="nation">Bangladesh</td>
+            </tr>
+            <tr>
+              <th>Gender</th>
+              <td id="gender">Male</td>
+            </tr>
           </table>
+        <p class="section-title">考试信息</p>
+        <table class="info-table">
+            <tr>
+              <th>考点名称</th>
+              <td id="center">Beijing (Demo Center)</td>
+            </tr>
+            <tr>
+              <th>Ticket No.</th>
+              <td id="ticket">H5XXXXXXXXXXXX</td>
+            </tr>
+            <tr>
+              <th>证书编号</th>
+              <td id="certno">H5XXXXXXXXXX</td>
+            </tr>
+            <tr>
+              <th>Test Type</th>
+              <td id="type">HSK五级</td>
+            </tr>
+            <tr>
+              <th>Test Time</th>
+              <td id="time">Dec 23, 2025</td>
+            </tr>
+          </table>
+        </div>
 
-          <div class="photo-box" aria-label="Photo">
-            <!-- replace src with your real photo path -->
-            <img src="photo.jpg" alt="证件照" />
+        <!-- RIGHT: photo -->
+        <div class="photo-box">
+          <div class="photo">
+            <img src="photo.jpg" alt="Photo (Demo)" />
           </div>
         </div>
       </div>
 
-      <!-- Scores -->
-      <div class="section">
-        <div class="score-title">HSK五级(Mar 11, 2023)中文水平考试</div>
+      <div class="divider"></div>
 
-        <table class="score-table" aria-label="HSK Scores">
+      <div class="score-block">
+        <div class="block-title">HSK五级（Demo）中文水平考试</div>
+        <table class="score-table">
           <thead>
             <tr>
               <th>听力</th>
@@ -88,19 +88,20 @@
           </thead>
           <tbody>
             <tr>
-              <td>89</td>
-              <td>84</td>
-              <td>68</td>
-              <td>241</td>
+              <td id="l">70</td>
+              <td id="r">80</td>
+              <td id="w">75</td>
+              <td class="total" id="total">225</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="section">
-        <div class="score-title">HSKK（高级）(Mar 11, 2023)中文水平考试</div>
+      <div class="gap-lg"></div>
 
-        <table class="score-table" aria-label="HSKK Scores">
+      <div class="score-block">
+        <div class="block-title">HSKK（高级）（Demo）中文水平考试</div>
+        <table class="score-table">
           <thead>
             <tr>
               <th>口试</th>
@@ -110,16 +111,21 @@
           </thead>
           <tbody>
             <tr>
-              <td>56</td>
-              <td>56</td>
-              <td>不合格</td>
+              <td id="speak">60</td>
+              <td class="total" id="speak_total">60</td>
+              <td id="status">合格</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="footer-note">最终解释权归汉考国际所有</div>
-    </div>
+      <footer class="footer">
+        <div class="note">
+          说明：此页面为课程项目演示（Demo），用于展示网页布局与二维码跳转，不代表任何官方成绩验证结果。
+        </div>
+        <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
