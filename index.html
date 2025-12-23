@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>中文考试成绩在线验证结果查询（Demo）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>中文考试成绩在线验证结果查询</h1>
+      <p class="sub">（项目演示 Demo - 非官方页面 / Not an official CTI page）</p>
+    </header>
+
+    <main class="card">
+      <div class="card-head">
+        <div class="section-title">Information of test taker</div>
+      </div>
+
+      <div class="top-grid">
+        <!-- LEFT: info tables -->
+        <div class="tables">
+          <table class="info-table">
+            <tr>
+              <th>Name on Certificate</th>
+              <td id="name">YOUR NAME</td>
+            </tr>
+            <tr>
+              <th>Chinese Name</th>
+              <td id="cnname">—</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td id="nation">Bangladesh</td>
+            </tr>
+            <tr>
+              <th>Gender</th>
+              <td id="gender">Male</td>
+            </tr>
+          </table>
+
+          <div class="gap"></div>
+
+          <table class="info-table">
+            <tr>
+              <th>考点名称</th>
+              <td id="center">Beijing (Demo Center)</td>
+            </tr>
+            <tr>
+              <th>Ticket No.</th>
+              <td id="ticket">H5XXXXXXXXXXXX</td>
+            </tr>
+            <tr>
+              <th>证书编号</th>
+              <td id="certno">H5XXXXXXXXXX</td>
+            </tr>
+            <tr>
+              <th>Test Type</th>
+              <td id="type">HSK五级</td>
+            </tr>
+            <tr>
+              <th>Test Time</th>
+              <td id="time">Dec 23, 2025</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- RIGHT: photo -->
+        <div class="photo-box">
+          <div class="photo">
+            <img src="photo.jpg" alt="Photo (Demo)" />
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="score-block">
+        <div class="block-title">HSK五级（Demo）中文水平考试</div>
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>听力</th>
+              <th>阅读</th>
+              <th>写作</th>
+              <th>Total Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="l">70</td>
+              <td id="r">80</td>
+              <td id="w">75</td>
+              <td class="total" id="total">225</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="gap-lg"></div>
+
+      <div class="score-block">
+        <div class="block-title">HSKK（高级）（Demo）中文水平考试</div>
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>口试</th>
+              <th>Total Score</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="speak">60</td>
+              <td class="total" id="speak_total">60</td>
+              <td id="status">合格</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="footer">
+        <div class="note">
+          说明：此页面为课程项目演示（Demo），用于展示网页布局与二维码跳转，不代表任何官方成绩验证结果。
+        </div>
+        <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
