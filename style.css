@@ -157,10 +157,16 @@ body{
   .photo{width:120px;height:150px}
 }
 .section-title {
-  font-size: 16px;
-  margin-bottom: 12px;
-  font-weight: bold;
-  color: #333333;
-  border-left: 3px solid #000;
-  padding-left: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+
+  margin-top: 0;      /* উপরের ফাঁকা সরাবে */
+  margin-bottom: 8px; /* নিচে সামান্য স্পেস */
+
+  padding-top: 0;     /* উপরের প্যাডিং বন্ধ */
+  padding-bottom: 0;
+
+  line-height: 1.2;
 }
+
