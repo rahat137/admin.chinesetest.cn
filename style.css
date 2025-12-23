@@ -155,10 +155,16 @@ body{
   .photo-box{width:100%}
   .photo{width:120px;height:150px}
 }
-.section-label{
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 6px;
+.info-divider{
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-top: none;
+  background: #fafafa;
 }
+
+.info-divider span{
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
