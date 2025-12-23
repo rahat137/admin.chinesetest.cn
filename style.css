@@ -1,12 +1,17 @@
+/* ===== ROOT VARIABLES ===== */
 :root{
   --bg:#f3f5f7;
   --card:#ffffff;
-  --border:#dcdcdc;
+  --border:#e6e6e6;
   --text:#222;
   --muted:#666;
 }
 
-*{box-sizing:border-box}
+/* ===== RESET ===== */
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +19,7 @@ body{
   color: var(--text);
 }
 
+/* ===== PAGE LAYOUT ===== */
 .page{
   max-width: 980px;
   margin: 24px auto;
@@ -24,17 +30,20 @@ body{
   text-align:center;
   margin-bottom: 14px;
 }
+
 .header h1{
   font-size: 20px;
   margin: 0 0 6px 0;
   font-weight: 700;
 }
+
 .sub{
   margin:0;
   font-size: 12px;
   color: var(--muted);
 }
 
+/* ===== CARD ===== */
 .card{
   background: var(--card);
   border: 1px solid var(--border);
@@ -43,42 +52,31 @@ body{
 }
 
 .card-head{
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
+
 .section-title{
   font-size: 13px;
   color: var(--muted);
   font-weight: 700;
 }
 
+/* ===== TOP GRID (TABLE + PHOTO COLUMN) ===== */
 .top-grid{
-  display:flex;
-  gap: 14px;
-  align-items:flex-start;
+  display: flex;
+  align-items: stretch;
 }
 
-.tables{flex:1}
-.photo-box{width: 140px}
-
-.photo{
-  width: 140px;
-  height: 170px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow:hidden;
-  background:#fafafa;
-}
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  display:block;
+/* LEFT TABLES */
+.tables{
+  flex: 1;
 }
 
+/* ===== INFO TABLE ===== */
 .info-table{
   width:100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 
 .info-table th,
@@ -90,22 +88,64 @@ body{
 
 .info-table th{
   width: 38%;
-  background:#f8f8f8;
-  font-weight:700;
+  background:#fff;
+  font-weight:600;
+  color:#333;
 }
 
-.gap{height:10px}
-.gap-lg{height:14px}
+/* ===== DIVIDER (考试信息) ===== */
+.info-divider{
+  padding: 6px 0;
+  background: transparent;
+}
 
+.info-divider span{
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ===== PHOTO COLUMN (CTI STYLE) ===== */
+.photo-col{
+  width: 150px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.photo-wrap{
+  width: 110px;
+  height: 135px;
+  border: 1px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== SEPARATORS ===== */
 .divider{
   height:1px;
   background: var(--border);
   margin: 14px 0;
 }
 
+.gap-lg{
+  height:14px;
+}
+
+/* ===== SCORE BLOCK ===== */
 .block-title{
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 8px 0;
   color:#333;
 }
@@ -113,21 +153,26 @@ body{
 .score-table{
   width:100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 12.5px;
 }
+
 .score-table th,
 .score-table td{
   border: 1px solid var(--border);
   padding: 10px;
   text-align:center;
 }
+
 .score-table th{
-  background:#f8f8f8;
-}
-.total{
-  font-weight: 800;
+  background:#fff;
+  font-weight:600;
 }
 
+.total{
+  font-weight:700;
+}
+
+/* ===== FOOTER ===== */
 .footer{
   margin-top: 16px;
   display:flex;
@@ -136,11 +181,13 @@ body{
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .note{
   font-size: 12px;
   color: var(--muted);
   max-width: 720px;
 }
+
 .btn{
   border:1px solid var(--border);
   background:#fff;
@@ -148,23 +195,29 @@ body{
   border-radius: 6px;
   cursor:pointer;
 }
-.btn:hover{background:#f6f6f6}
 
+.btn:hover{
+  background:#f6f6f6;
+}
+
+/* ===== PRINT STYLE ===== */
+@media print{
+  body{
+    background:#fff;
+  }
+  .btn{
+    display:none;
+  }
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 720px){
-  .top-grid{flex-direction:column}
-  .photo-box{width:100%}
-  .photo{width:120px;height:150px}
+  .top-grid{
+    flex-direction: column;
+  }
+  .photo-col{
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
 }
-.info-divider{
-  padding: 8px 10px;
-  border: 1px solid var(--border);
-  border-top: none;
-  background: #fafafa;
-}
-
-.info-divider span{
-  font-size: 13px;
-  font-weight: 700;
-  color: #333;
-}
-
