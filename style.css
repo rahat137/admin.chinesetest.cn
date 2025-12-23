@@ -159,7 +159,10 @@ body{
   font-size: 13px;
   color: var(--muted);
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
 }
+
 
