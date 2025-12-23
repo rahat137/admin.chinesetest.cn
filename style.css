@@ -155,3 +155,11 @@ body{
   .photo-box{width:100%}
   .photo{width:120px;height:150px}
 }
+.section-label{
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
