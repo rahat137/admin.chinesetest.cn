@@ -155,14 +155,19 @@ body{
   .photo-box{width:100%}
   .photo{width:120px;height:150px}
 }
-.section-label{
-  font-size: 10px;
-  color: var(--muted);
+.section-title {
+  font-size: 12px;
   font-weight: 700;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding-top: 6px;
-  border-top: 1px;
+  color: #000;
+
+  margin-top: 0;      /* উপরের ফাঁকা সরাবে */
+  margin-bottom: 8px; /* নিচে সামান্য স্পেস */
+
+  padding-top: 0;     /* উপরের প্যাডিং বন্ধ */
+  padding-bottom: 0;
+
+  line-height: 1.2;
 }
+
 
 
