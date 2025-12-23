@@ -155,23 +155,15 @@ body{
   .photo-box{width:100%}
   .photo{width:120px;height:150px}
 }
-.info-table{
-  margin: 0 !important;
-  border-spacing: 0 !important;
-  border-collapse: collapse !important;
+.section-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #333333;
+  border-left: 3px solid #000;
+  padding-left: 8px;
 }
 
-.info-table + .section-title{
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.section-title{
-  display: block;
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.2;
-}
 
 
 
