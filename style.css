@@ -1,51 +1,50 @@
 /* =========================
-   STYLE.CSS (FINAL)
-   Goal: looks like your 1st image
-   - centered page (max width)
-   - grey background
-   - thin borders
-   - correct middle divider position
+   FINAL CLEAN STYLE.CSS
+   (for your current HTML)
    ========================= */
 
+/* Theme */
 :root{
-  --bg:#f3f5f7;
-  --card:#ffffff;
-  --border:#dcdcdc;
-  --header:#f8f8f8;
-  --text:#222;
-  --muted:#666;
+  --border-color: #e6e6e6;
+  --border-w: 1px;
+  --border: var(--border-w) solid var(--border-color);
 
-  --border-w:1px;
-  --b: var(--border-w) solid var(--border);
+  --bg: #ffffff;        /* page background */
+  --panel-bg: #ffffff;  /* box background */
+  --header-bg: #f7f7f7; /* table header + label cells */
+  --text: #222;
+  --muted: #333;
 }
 
-*{ box-sizing:border-box; }
+*{ box-sizing: border-box; }
 
 body{
-  margin:0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 
-/* ===== Page container (CENTER like image 1) ===== */
+/* ===== Page width (Fix big left/right blank space) ===== */
 .well-sm{
-  max-width: 980px;      /* key: same as 1st image */
-  margin: 24px auto;     /* center */
-  padding: 0 14px;       /* side padding */
+  width: 100%;
+  max-width: none;   /* remove limits */
+  margin: 0;         /* no centered narrow block */
+  padding: 18px 18px;
 }
 
-/* ===== Titles ===== */
+/* ===== Titles (Fix size difference) ===== */
 center h2{
-  margin: 12px 0 6px;
-  font-size: 20px;
+  margin: 16px 0 6px;
+  font-size: 26px;     /* bigger title */
   font-weight: 700;
+  color: #111;
 }
 center h4{
-  margin: 0 0 14px;
-  font-size: 12px;
+  margin: 0 0 18px;
+  font-size: 14px;
   font-weight: 600;
-  color: var(--muted);
+  color: #222;
 }
 center h6{
   margin: 14px 0 6px;
@@ -54,130 +53,125 @@ center h6{
   color: #333;
 }
 
-/* ===== Outer card ===== */
+/* ===== Panels / Boxes (Fix box size + consistent borders) ===== */
 .panel{
-  background: var(--card);
-  border: var(--b);
-  border-radius: 8px;  /* like image 1 */
-  overflow: hidden;
+  width: 100%;
+  background: var(--panel-bg);
+  border: var(--border);
+  border-radius: 4px;
   margin: 0 0 16px 0;
 }
-.panel-default{ border: var(--b); }
 
-.well-lg{
-  padding: 14px;
-  background: var(--card);
+.panel-default{
+  border: var(--border);
 }
 
-/* inner panels: keep clean (no double thick look) */
+/* the inside padding area */
+.well-lg{
+  padding: 14px;
+  background: var(--panel-bg);
+}
+
+/* inner panels */
 .panel .panel{
-  border: 0;
-  border-radius: 0;
-  margin: 0 0 14px 0;
+  border: var(--border);
+  border-radius: 4px;
+  background: var(--panel-bg);
+  margin: 0 0 16px 0;
   overflow: hidden;
 }
 
+/* panel header bar text */
 .panel-body{
   padding: 10px 12px;
   font-size: 13px;
-  font-weight: 700;
-  color: var(--muted);
-  background: transparent;
-  border: 0;
+  font-weight: 500;
+  color: #444;
+  background: var(--panel-bg);
+  border-bottom: var(--border);
 }
 
-/* ===== TABLES (MOST IMPORTANT FIXES) ===== */
+/* ===== Tables (Fix thick/thin borders + middle divider issue) ===== */
 .table{
   width: 100%;
   border-collapse: collapse;
-  table-layout: auto;      /* KEY: fixes wrong divider position */
-  background: var(--card);
+  table-layout: fixed;    /* IMPORTANT: prevents weird column gaps */
+  background: var(--panel-bg);
   margin: 0;
   font-size: 13px;
 }
 
 .table-bordered{
-  border: var(--b);
+  border: var(--border);
 }
 
 .table td, .table th{
-  border: var(--b);        /* thin like image 1 */
-  padding: 9px 10px;
+  border: var(--border);  /* SAME border everywhere */
+  padding: 10px 12px;
   vertical-align: middle;
-  word-break: break-word;
+  word-wrap: break-word;
   overflow-wrap: anywhere;
 }
 
-/* header row */
+/* header row (听力/阅读/写作/Total Score etc.) */
 .table thead th{
-  background: var(--header);
+  background: var(--header-bg);
   font-weight: 700;
 }
 
 /* left label cells */
 .active{
-  background: var(--header);
-  font-weight: 700;
-  color: #111;
+  background: var(--header-bg);
+  font-weight: 500;
+  color: #333;
 }
 
 .text-right{ text-align: right; }
 
-/* ===== FIX #1: divider position (label/value split like image 1) ===== */
-/* Label column width */
+/* Make label column width stable */
 .table td.active.text-right{
-  width: 38%;              /* like image 1 */
+  width: 260px;
   white-space: nowrap;
 }
 
-/* Value column */
-.table td.active.text-right + td{
-  width: 62%;
-}
-
-/* ===== FIX #2: photo column stable ===== */
+/* Photo cell */
 .table td[rowspan]{
-  width: 160px;            /* like image 1 */
+  width: 150px;
   text-align: center;
-  vertical-align: top;
 }
 
 .table img{
-  display:block;
-  margin: 10px auto;
-  width: 140px;
-  height: 170px;
-  object-fit: cover;
-  border: var(--b);
-  border-radius: 4px;
-  background: #fafafa;
-  padding: 0;
+  display: block;
+  margin: 6px auto;
+  border: var(--border);
+  background: #fff;
+  padding: 4px;
+  width: 115px;   /* consistent size */
+  height: auto;
 }
 
-/* "考试信息" divider row */
+/* ===== Special row: 考试信息 (if it’s a full-width divider row) ===== */
+/* If your HTML has a row like: <td colspan="2" style="font-size:14px;">考试信息</td> */
 .table td[colspan="2"][style*="font-size:14px"],
 .table td[colspan="2"][style*="font-size: 14px"]{
-  background: transparent;
+  background: var(--panel-bg);
   font-weight: 700;
   color: #333;
-  padding-top: 12px;
-  padding-bottom: 8px;
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 720px){
+/* ===== Mobile responsive ===== */
+@media (max-width: 768px){
   .well-sm{
-    margin: 12px auto;
-    padding: 0 10px;
+    padding: 10px;
   }
 
-  center h2{ font-size: 18px; }
-  center h4{ font-size: 12px; }
+  center h2{ font-size: 20px; }
+  center h4{ font-size: 13px; }
 
   .well-lg{ padding: 10px; }
 
   .table td, .table th{
-    padding: 8px;
+    padding: 8px 8px;
     font-size: 12.5px;
   }
 
@@ -187,11 +181,10 @@ center h6{
   }
 
   .table td[rowspan]{
-    width: 130px;
+    width: 120px;
   }
 
   .table img{
-    width: 120px;
-    height: 150px;
+    width: 95px;
   }
 }
